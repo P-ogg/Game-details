@@ -22,7 +22,7 @@ parameters = {
 
 # Get json from API
 #While response.status_code == 200:
-response = requests.get('https://api.mobygames.com/v1/games?api_key=moby_BE9XIO2SOpkDndSUZiNv29zEiT4', params=parameters)
+response = requests.get('https://api.mobygames.com/v1/games?api_key=your_key', params=parameters) # replace 'your_key' with your API key. visit https://www.mobygames.com/info/api/ to learn how to get an API key
 x=x+100
     
 if response.status_code == 200:
@@ -78,10 +78,10 @@ parameters = {
 
 # Get json from API
 
-response = requests.get('https://api.mobygames.com/v1/games?api_key=moby_BE9XIO2SOpkDndSUZiNv29zEiT4', params=parameters)
+response = requests.get('https://api.mobygames.com/v1/games?api_key=your_key', params=parameters) # replace 'your_key' with your API key. visit https://www.mobygames.com/info/api/ to learn how to get an API key
 
 while response.status_code == 200 and x< 5000:
-    response = requests.get('https://api.mobygames.com/v1/games?api_key=moby_BE9XIO2SOpkDndSUZiNv29zEiT4', params={"offset":x, "limit":100})
+    response = requests.get('https://api.mobygames.com/v1/games?api_key=your_key', params={"offset":x, "limit":100})
     if x==0:
         print("Succesful connection with API.")
         print('-------------------------------')
@@ -113,10 +113,3 @@ else:
         print("Unable to reach URL.")
     else:
         print("Unable to connect API or retrieve data.")
-
-
-# In[ ]:
-
-
-
-
